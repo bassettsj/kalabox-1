@@ -11,23 +11,25 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 
     <!-- Vendor files -->
-    <script src="lib/vendor/jquery/dist/jquery.js"></script>
-    <script src="lib/vendor/d3/d3.js"></script>
-    <script src="lib/vendor/angular/angular.js"></script>
-    <script src="lib/vendor/angular-route/angular-route.js"></script>
-    <script src="lib/vendor/angular-bootstrap/ui-bootstrap.js"></script>
+    <!-- // <script src="lib/vendor/jquery/dist/jquery.js"></script>
+    // <script src="lib/vendor/d3/d3.js"></script>
+    // <script src="lib/vendor/angular/angular.js"></script>
+    // <script src="lib/vendor/angular-route/angular-route.js"></script>
+    // <script src="lib/vendor/angular-bootstrap/ui-bootstrap.js"></script> -->
 
     <!-- App files -->
-    <script src="modules/nodewrappers/nodewrappers.js"></script>
-    <script src="modules/dashboard/dashboard.js"></script>
-    <script src="modules/installer/installer.js"></script>
+    <!-- // <script src="modules/nodewrappers/nodewrappers.js"></script>
+    // <script src="modules/dashboard/dashboard.js"></script>
+    // <script src="modules/installer/installer.js"></script> -->
 
-    <script src="app.js"></script>
+    <script src="Kalabox.pkg.js"></script>
 
   </head>
-  <body ng-app="app">
+  <body ng-app="fakeApp">
     <div id="main" role="main">
-      <div id="content" class="container" ng-view=""></div>
+      <div id="content" class="container" ng-controller="FakeAppCtrl as fakeApp">
+        <h1 ng-repeat="fakeApp.coolthings as coolthing">{{coolthing}}</h1>
+      </div>
     </div>
   </body>
 </html>

@@ -25,6 +25,21 @@ module.exports = function(grunt) {
         ]
       }
     },
+    /**
+     * Browserify!
+     *
+     */
+    browserify: {
+      dist: {
+        files: [{'src/<%= pkg.name %>.pkg.js': 'src/index.js'}],
+        options: {
+          transform:['debowerify'],
+          debug: true,
+          insertGlobals: false,
+          detectGlobals: false
+        }
+      }
+    },
     compress: {
       win: {
         options: {
